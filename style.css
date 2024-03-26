@@ -74,6 +74,52 @@ p {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   max-width: 62.5rem; /*Tamanho máximo que o main pode se expandir.*/
+  max-width: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  body {
+    gap: 30px;
+    margin-top: 20px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  .menu ul {
+    place-content: center;
+    margin: 0 auto;
+  }
+
+  .introduction {
+    place-items: center center;
+  }
+
+  .introduction::after {
+    display: none;
+  }
+
+  .subtitle,
+  .introduction p,
+  .container h2 {
+    text-align: center;
+  }
+
+  .introduction h1 {
+    justify-self: center;
+  }
+
+  .introduction a {
+    justify-self: center;
+  }
+
+  .subtitle {
+    font-size: 3rem;
+  }
+
 }
 
 .introduction {
@@ -85,6 +131,12 @@ p {
   align-content: center; /*Alinhamento vertical do conteúdo.*/
   gap: 1.25rem;
   justify-items: end; /*Diminui o tamanho da div do ver mais, para que ela fique somente do tamanho do conteúdo.*/
+}
+
+.image-introduction {
+  object-fit: cover;
+  object-position: center center;
+  height: 100%;
 }
 
 .introduction::after {

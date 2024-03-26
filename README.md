@@ -1,2 +1,2 @@
-Projeto Básico de site de HTML.
-Objeto de estudos. O site não é responsivo, muito menos funcional.
+Projeto Básico de site de bicicletas, utilizando apenas HTML e CSS.
+Objeto de estudos, o site não tem funcionalidade prática.
