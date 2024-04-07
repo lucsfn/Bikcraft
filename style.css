@@ -1,3 +1,23 @@
+:root {
+--main-color: #ee2211;
+--secondary-color: #900;
+--background1: #f7f7f7;
+--background2: #fff;
+--textcolor: #000;
+--subtitle: rgba(0,0,0, 0.2)
+}
+
+:root {
+--background1: #111; 
+--background2: #000;
+--textcolor: #fff;
+--subtitle: rgba(255, 255, 255, 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
@@ -5,7 +25,8 @@ body {
   justify-items: center; /*Centralizar todo o sistema de grid do site.*/
   gap: 3.75rem;
   margin-top: 3.75rem;
-  background: #f7f7f7;
+  background: var(--background1);
+  color: var(--textcolor);
 }
 
 img {
@@ -24,7 +45,7 @@ header {
   justify-items: center;
 }
 
-.logo {
+svg {
   grid-row: 1;
   margin: 0;
   padding: 0;
@@ -57,16 +78,16 @@ p {
 }
 
 .menu a {
-  background-color: white;
+  background-color: var(--background2);
   padding: 0.93rem 1.87rem;
   border-radius: 0.25rem;
-  color: black;
+  color: var(--textcolor);
   text-transform: uppercase;
   font-size: larger;
 }
 
 .menu a:hover {
-  background-color: #ee2211;
+  background-color: var(--main-color);
 }
 
 .container {
@@ -123,7 +144,7 @@ p {
 }
 
 .introduction {
-  background: white;
+  background: var(--background2);
   padding: 2.5rem;
   text-align: right;
   position: relative; /*Permite que o detalhe de desing fique alinhado a div de introdução.*/
@@ -143,22 +164,22 @@ p {
   content: "";
   width: 3.75rem;
   height: 0.25rem;
-  background-color: #ee2211;
+  background-color: var(--main-color);
   position: absolute;
   top: 1.87rem;
   right: -1.87rem;
 }
 
 .button {
-  background: #ee2211;
-  color: white;
+  background: var(--main-color);
+  color: #fff;
   padding: 0.93rem 1.87rem;
   border-radius: 0.25rem;
   text-transform: uppercase;
 }
 
 .button:hover {
-  background-color: #900;
+  background-color: var(--secondary-color);
 }
 
 main section {
@@ -172,16 +193,15 @@ article h1 {
 .subtitle {
   font-size: 4rem;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.2);
+  color: var(--subtitle);
   text-align: right;
   padding: 2.5rem;
   align-self: center;
-  background-image: url(./img/onda.svg);
   align-self: center;
 }
 
 .benefits {
-  background: white;
+  background: var(--background2);
   padding: 2.5rem;
 }
 
@@ -197,15 +217,15 @@ article h1 {
 }
 
 .benefits-item:nth-child(odd) {
-  background-color: #f7f7f7;
+  background-color: var(--background1);
 }
 
 .benefits-item:nth-child(odd):hover {
-  border-left: 0.25rem solid #ee2211;
+  border-left: 0.25rem solid var(--main-color);
 }
 
 footer {
-  background-color: white;
+  background-color: var(--background2);
   width: 100%;
   text-align: center;
   padding: 2.5rem;
